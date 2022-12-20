@@ -55,4 +55,4 @@ repos:
     args:
     - --license-filepath
     - hack/config/license.txt
-    - --remove-header
+    # - --remove-header

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Copyright (C) Nicolas Lamirault <nicolas.lamirault@gmail.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,22 +13,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
-# SPDX-License-Identifier: Apache-2.0
 
-name: Project / Draft PR Labels
+# set -euo pipefail
+set -o pipefail
 
-on:
-  pull_request:
-    types: [opened, ready_for_review]
-
-jobs:
-  triage:
-    runs-on: ubuntu-latest
-    steps:
-    - name: label swapping
-      uses: jinmayamashita/ready-for-review@1.0.0
-      with:
-        in-progress-label: 'status/in_progress'
-        ready-for-review-label: 'status/review_needed'
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+for module in $(ls modules); do
+    pushd "modules/${module}"
+    terraform init -upgrade
+    terraform validate
+    popd
+done
