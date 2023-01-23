@@ -18,6 +18,8 @@
 resource "scaleway_object_bucket" "this" {
   for_each = local.buckets_names
 
+  name = format("%s-%s", local.service_name, each.key)
+
   region = var.region
   acl    = "private"
 
@@ -31,7 +33,7 @@ resource "scaleway_object_bucket" "this" {
   # }
 
   tags = merge(
-    { "Name" = local.service },
+    { "Name" = format("%s-%s", local.service_name, each.key) },
     var.tags
   )
 }

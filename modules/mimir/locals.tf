@@ -16,7 +16,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 locals {
-  service = "mimir"
+  service_name = format("%s-mimir", var.cluster_name)
 
   buckets_names = [
     "admin",
