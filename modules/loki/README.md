@@ -32,6 +32,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | Name of the Kubernetes cluster | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | The region in which the buckets should be created | `string` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | A list of tags (key / value) for the bucket. | `map(string)` | <pre>{<br>  "Made-By": "Terraform"<br>}</pre> | no |
 
