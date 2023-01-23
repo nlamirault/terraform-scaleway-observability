@@ -54,5 +54,5 @@ repos:
     exclude: ^\.secrets/.*$|^\.git-crypt/.*$
     args:
     - --license-filepath
-    - hack/config/license.txt
+    - LICENSE
     # - --remove-header
