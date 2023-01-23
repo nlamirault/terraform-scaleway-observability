@@ -16,7 +16,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 locals {
-  service = "loki"
+  service_name = format("%s-loki", var.cluster_name)
 
   buckets_names = [
     "admin",
