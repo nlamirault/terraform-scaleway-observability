@@ -17,6 +17,11 @@
 
 # Loki
 
+variable "cluster_name" {
+  type        = string
+  description = "Name of the Kubernetes cluster"
+}
+
 variable "region" {
   type        = string
   description = "The region in which the buckets should be created"
