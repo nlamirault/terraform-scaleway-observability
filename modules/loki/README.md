@@ -1,6 +1,6 @@
-# Observability / Mimir
+# Observability / Loki
 
-Terraform module which configure Mimir resources on Scaleway.
+Terraform module which configure Loki resources on Scaleway.
 
 ## Documentation
 

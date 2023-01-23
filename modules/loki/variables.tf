@@ -15,7 +15,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-# Mimir
+# Loki
 
 variable "region" {
   type        = string
