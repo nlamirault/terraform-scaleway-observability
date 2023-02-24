@@ -20,9 +20,9 @@ name: Project / Tfsec
 # events but only for the main branch
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   tfsec:
