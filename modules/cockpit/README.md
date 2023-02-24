@@ -1,6 +1,6 @@
-# Observability / Tempo
+# Observability / Cockpit
 
-Terraform module which configure Tempo resources on Scaleway.
+Terraform module which configure Cockpit resources on Scaleway.
 
 ## Documentation
 
