@@ -16,12 +16,11 @@
 # SPDX-License-Identifier: Apache-2.0
 
 resource "scaleway_object_bucket" "this" {
-  for_each = local.buckets_names
+  for_each = toset(local.buckets_names)
 
   name = format("%s-%s", local.service_name, each.key)
 
   region = var.region
-  acl    = "private"
 
   # lifecycle_rule {
   #   id      = "id1"
@@ -36,4 +35,11 @@ resource "scaleway_object_bucket" "this" {
     { "Name" = format("%s-%s", local.service_name, each.key) },
     var.tags
   )
+}
+
+resource "scaleway_object_bucket_acl" "this" {
+  for_each = toset(local.buckets_names)
+
+  bucket = scaleway_object_bucket.this[each.key].name
+  acl    = "private"
 }
