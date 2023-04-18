@@ -27,6 +27,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [scaleway_object_bucket.this](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs/resources/object_bucket) | resource |
+| [scaleway_object_bucket_acl.this](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs/resources/object_bucket_acl) | resource |
 
 ## Inputs
 
