@@ -21,7 +21,7 @@ resource "scaleway_cockpit_token" "prometheus" {
 
   name = format("%s-metrics", local.service_name)
 
-  scopes = {
+  scopes {
     query_metrics = true
     write_metrics = false
 
@@ -35,7 +35,7 @@ resource "scaleway_cockpit_token" "loki" {
 
   name = format("%s-logs", local.service_name)
 
-  scopes = {
+  scopes {
     query_metrics = false
     write_metrics = false
 
@@ -49,7 +49,7 @@ resource "scaleway_cockpit_token" "grafana" {
 
   name = format("%s-grafana", local.service_name)
 
-  scopes = {
+  scopes {
     query_metrics = true
     write_metrics = false
 
