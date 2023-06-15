@@ -14,7 +14,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-name: Project / Draft PR Labels
+name: Project / PR Labels
 
 on:
   pull_request:
