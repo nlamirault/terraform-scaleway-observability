@@ -1,4 +1,3 @@
-
 # Copyright (C) Nicolas Lamirault <nicolas.lamirault@gmail.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,13 +14,6 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-locals {
-  app          = "Mimir"
-  service_name = format("%s-mimir", var.cluster_name)
-
-  buckets_names = [
-    "admin",
-    "ruler",
-    "tsdb"
-  ]
+data "scaleway_account_project" "this" {
+  project_id = var.project_id
 }
