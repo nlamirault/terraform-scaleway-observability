@@ -16,6 +16,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 locals {
+  app          = "Tempo"
   service_name = format("%s-tempo", var.cluster_name)
 
   buckets_names = [
