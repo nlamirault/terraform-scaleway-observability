@@ -20,7 +20,7 @@ resource "scaleway_cockpit_source" "logs" {
   type       = "metrics"
 }
 
-resource "scaleway_cockpit_source" "logs" {
+resource "scaleway_cockpit_source" "metrics" {
   project_id = data.scaleway_cockpit.this.project_id
   name       = format("%s-metrics", local.service_name)
   type       = "metrics"

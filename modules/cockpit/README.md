@@ -27,6 +27,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [scaleway_cockpit_source.logs](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs/resources/cockpit_source) | resource |
+| [scaleway_cockpit_source.metrics](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs/resources/cockpit_source) | resource |
 | [scaleway_cockpit_source.traces](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs/resources/cockpit_source) | resource |
 | [scaleway_cockpit_token.grafana](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs/resources/cockpit_token) | resource |
 | [scaleway_cockpit_token.logs](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs/resources/cockpit_token) | resource |
