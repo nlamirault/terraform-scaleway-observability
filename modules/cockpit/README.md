@@ -4,7 +4,7 @@ Terraform module which configure Cockpit resources on Scaleway.
 
 ## Documentation
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -26,10 +26,12 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [scaleway_cockpit.this](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs/resources/cockpit) | resource |
+| [scaleway_cockpit_source.logs](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs/resources/cockpit_source) | resource |
+| [scaleway_cockpit_source.traces](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs/resources/cockpit_source) | resource |
 | [scaleway_cockpit_token.grafana](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs/resources/cockpit_token) | resource |
 | [scaleway_cockpit_token.loki](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs/resources/cockpit_token) | resource |
 | [scaleway_cockpit_token.prometheus](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs/resources/cockpit_token) | resource |
+| [scaleway_cockpit.this](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs/data-sources/cockpit) | data source |
 
 ## Inputs
 
@@ -45,4 +47,4 @@ No modules.
 | <a name="output_grafana_url"></a> [grafana\_url](#output\_grafana\_url) | The grafana URL. |
 | <a name="output_logs_url"></a> [logs\_url](#output\_logs\_url) | The logs URL. |
 | <a name="output_metrics_url"></a> [metrics\_url](#output\_metrics\_url) | The metrics URL. |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->
