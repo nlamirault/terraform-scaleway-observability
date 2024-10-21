@@ -13,23 +13,3 @@
 # limitations under the License.
 #
 # SPDX-License-Identifier: Apache-2.0
-
-output "metrics_url" {
-  value       = scaleway_cockpit.this.id
-  description = "The metrics URL."
-}
-
-output "logs_url" {
-  value       = scaleway_cockpit.this.id
-  description = "The logs URL."
-}
-
-output "alertmanager_url" {
-  value       = scaleway_cockpit.this.id
-  description = "The alertmanager URL."
-}
-
-output "grafana_url" {
-  value       = scaleway_cockpit.this.id
-  description = "The grafana URL."
-}
