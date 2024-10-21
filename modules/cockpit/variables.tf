@@ -15,6 +15,11 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
+variable "project_id" {
+  type        = string
+  description = "ID of the project"
+}
+
 variable "cluster_name" {
   type        = string
   description = "Name of the Kubernetes cluster"
