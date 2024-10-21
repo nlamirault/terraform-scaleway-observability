@@ -14,20 +14,6 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-resource "scaleway_cockpit_token" "prometheus" {
-  project_id = data.scaleway_cockpit.this.project_id
-
-  name = format("%s-metrics", local.service_name)
-
-  scopes {
-    query_metrics = true
-    write_metrics = false
-
-    query_logs = false
-    write_logs = false
-  }
-}
-
 resource "scaleway_cockpit_source" "logs" {
   project_id = data.scaleway_cockpit.this.project_id
   name       = format("%s-logs", local.service_name)
@@ -44,32 +30,4 @@ resource "scaleway_cockpit_source" "traces" {
   project_id = data.scaleway_cockpit.this.project_id
   name       = format("%s-traces", local.service_name)
   type       = "traces"
-}
-
-resource "scaleway_cockpit_token" "loki" {
-  project_id = data.scaleway_cockpit.this.project_id
-
-  name = format("%s-logs", local.service_name)
-
-  scopes {
-    query_metrics = false
-    write_metrics = false
-
-    query_logs = true
-    write_logs = true
-  }
-}
-
-resource "scaleway_cockpit_token" "grafana" {
-  project_id = data.scaleway_cockpit.this.project_id
-
-  name = format("%s-grafana", local.service_name)
-
-  scopes {
-    query_metrics = true
-    write_metrics = false
-
-    query_logs = true
-    write_logs = false
-  }
 }
